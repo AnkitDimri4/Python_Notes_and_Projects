@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1><b>Welcome!{{name}}</b></h1>
+<form action="add" method="post">
+    {% csrf_token %}  <!-- CSRF verification failed. Request aborted.
+         Cross Site Request Forgery, or when Django’s CSRF mechanism -->
+    Enter 1st number: <input type="text" name="number 1"><br><br>
+    Enter 2nd number: <input type="text" name="number 2"><br><br>
+    <input type="submit">
+</form>
+{% endblock %}
